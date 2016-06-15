@@ -4,7 +4,8 @@ var request = require('request'),
     
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk(process.env.IP + ':27017/alertlist');
+//var db = monk(process.env.IP + ':27017/alertlist');
+var db = monk('localhost:27017/alertlist');
 
 function writeToDB (element) {
   //remove the assigned id

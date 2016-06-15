@@ -17,7 +17,8 @@ var app = express();
 // DB code
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk(process.env.IP + ':27017/alertlist');
+//var db = monk(process.env.IP + ':27017/alertlist');
+var db = monk('localhost:27017/alertlist');
 // Make our db accessible to our router
 app.use(function(req,res,next){
     req.db = db;
