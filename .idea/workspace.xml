@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a8c74a9-b674-4b04-9d6e-ab70c4b47b68" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wAdmin/wAdmin/FIPSdata.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wAdmin/wAdmin/Zipdata.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wAdmin/wAdmin/national_county.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GNAS.iws" />
@@ -354,7 +351,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1466012246854</updated>
-      <workItem from="1466012248082" duration="8089000" />
+      <workItem from="1466012248082" duration="8100000" />
     </task>
     <task id="LOCAL-00001" summary="adding customer.json and dependencies">
       <created>1466016161550</created>
@@ -377,11 +374,18 @@
       <option name="project" value="LOCAL" />
       <updated>1466020563571</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="FIPS works now">
+      <created>1466022176891</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1466022176891</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8089000" />
+    <option name="totallyTimeSpent" value="8100000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -423,7 +427,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="adding customer.json and dependencies" />
     <MESSAGE value="customer data generation works" />
-    <option name="LAST_COMMIT_MESSAGE" value="customer data generation works" />
+    <MESSAGE value="FIPS works now" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIPS works now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
