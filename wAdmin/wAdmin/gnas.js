@@ -130,9 +130,9 @@ feedparser.on('end', function() {
   console.log("entering mail");
   var mailOptions = {
     from: '"GNAS Alert" <gnas@alvinbaker.com>', // sender address
-    to: 'gnas@alvinbaker.com, lyonsden@lyons-family.net', // list of receivers
+    to: '2176491422@txt.att.net, 3097509512@tt.att.net', // list of receivers
     subject: '', // Subject line
-    text: alertString, // plaintext body
+    text: "Severe weather alert - take cover now!!!!", // plaintext body
     // html: '<b>Hello world 🐴</b>' // html body
   };
 
