@@ -14,14 +14,17 @@ function writeToDB (data) {
   var errFunc = function (err, doc) {
       if (err) {
           // If it failed, return error
-          console.log("There was a problem adding " + temp.name + " to the database. Error: " + err.message);
+          console.log("There was a problem adding " + data.toJSON().name + " to the database. Error: " + err.message);
       } else {
          // console.log("Inserted record: " + element.name + " succesffully.");
       }
   };
   
   // Submit to the DB
-  userCol.insert(data, errFunc);
+    var text = data.toString();
+    var js = JSON.parse(text);
+
+    userCol.insert(js, errFunc);
 }
 
 var linereader = require('through2-linereader');
