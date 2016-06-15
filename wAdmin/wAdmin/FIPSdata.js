@@ -26,10 +26,16 @@ function writeToDB (data) {
 function sanitize (line) {
     text = line.toString();
     var values = text.split(",");
+    var countyData  = "";
+    if (values[3].indexOf(" County") > 0) {
+        countyData = values[3].substring(0,values[3].indexOf(" County"));
+    } else {
+        countyData = values[3];
+    }
     var result = {
         state: values[0],
         FIPS: "0" + values[1] + values[2],
-        county: values[3]
+        county: countyData
     };
     return result;
 }

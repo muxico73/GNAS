@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a8c74a9-b674-4b04-9d6e-ab70c4b47b68" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wAdmin/wAdmin/us_postal_codes.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wAdmin/wAdmin/FIPSdata.js" afterPath="$PROJECT_DIR$/wAdmin/wAdmin/FIPSdata.js" />
     </list>
     <ignored path="GNAS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,16 +55,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customerdata.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wAdmin/wAdmin/customerdata.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="alertlist.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wAdmin/wAdmin/routes/alertlist.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -105,6 +97,16 @@
       </file>
       <file leaf-file-name="Zipdata.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wAdmin/wAdmin/Zipdata.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="us_postal_codes.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wAdmin/wAdmin/us_postal_codes.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -217,28 +219,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wAdmin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GNAS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GNAS" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wAdmin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -272,6 +252,7 @@
       <recent name="C:\Users\hacker\Documents\GNAS\GNAS\wAdmin\wAdmin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hacker\Documents\GNAS\GNAS\wAdmin" />
       <recent name="C:\Users\hacker\Documents\GNAS\GNAS\wAdmin\wAdmin" />
       <recent name="C:\Users\hacker\Documents\GNAS\GNAS\wAdmin\wAdmin\routes" />
     </key>
@@ -351,7 +332,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1466012246854</updated>
-      <workItem from="1466012248082" duration="8100000" />
+      <workItem from="1466012248082" duration="8784000" />
     </task>
     <task id="LOCAL-00001" summary="adding customer.json and dependencies">
       <created>1466016161550</created>
@@ -381,11 +362,18 @@
       <option name="project" value="LOCAL" />
       <updated>1466022176891</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="FIPS works now">
+      <created>1466022185258</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1466022185258</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8100000" />
+    <option name="totallyTimeSpent" value="8784000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -531,8 +519,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wAdmin/wAdmin/FIPSdata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        <state relative-caret-position="469">
+          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wAdmin/wAdmin/us_postal_codes.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
