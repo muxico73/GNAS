@@ -5,11 +5,11 @@ var request = require('request'),
 var mongo = require('mongodb');
 var monk = require('monk');
 //var db = monk(process.env.IP + ':27017/alertlist');
-var db = monk('localhost:27017/FIPS');
+var db = monk('localhost:27017/zip');
 
 function writeToDB (data) {
   // Set a collection
-  var userCol = db.get('countycollection');
+  var userCol = db.get('zipcollection');
     //define error function
   var errFunc = function (err, doc) {
       if (err) {
@@ -27,9 +27,9 @@ function sanitize (line) {
     text = line.toString();
     var values = text.split(",");
     var result = {
-        state: values[0],
-        FIPS: "0" + values[1] + values[2],
-        county: values[3]
+        zipcode: values[0],
+        state: values[3],
+        county: values[4]
     };
     return result;
 }
@@ -37,7 +37,7 @@ function sanitize (line) {
 var linereader = require('through2-linereader');
 
 var fs = require('fs');
-fs.createReadStream('national_county.txt', 'utf8')
+fs.createReadStream('us_postal_codes.csv', 'utf8')
     .pipe(linereader())
     .on('data', function(line){
         writeToDB(line);
