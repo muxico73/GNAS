@@ -30,7 +30,7 @@ function writeToDB (data) {
 var linereader = require('through2-linereader');
 
 var fs = require('fs');
-fs.createReadStream('../customer.json', 'utf8')
+fs.createReadStream('customer.json', 'utf8')
     .pipe(linereader())
     .on('data', function(line){
         writeToDB(line);
