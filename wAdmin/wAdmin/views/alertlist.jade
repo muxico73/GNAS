@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1.
+        Alert List
+    ul
+        table(style='border: 1px solid black;')
+          tr
+            th(style='width: 300px;text-align: center;') Alert Name
+            th(style='width: 300px;text-align: center;') Alert Description
+          each alert, i in alertlist
+            tr 
+                td(style='text-align: center;') #{alert.name}
+                td(style='text-align: center;') #{alert.description}
+                

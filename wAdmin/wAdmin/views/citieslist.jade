@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    h1.
+        Alert List
+    ul
+        table(style='border: 1px solid black;')
+          tr
+            th(style='width: 300px;text-align: center;') City Name
+            th(style='width: 300px;text-align: center;') State
+            th(style='width: 300px;text-align: center;') County
+            th(style='width: 300px;text-align: center;') LSAD
+            th(style='width: 300px;text-align: center;') Census Area
+            th(style='width: 300px;text-align: center;') City Geometry Type
+          each city, i in citieslist
+            tr 
+                td(style='text-align: center;') #{city.name}
+                td(style='text-align: center;') #{city.properties.STATE}
+                td(style='text-align: center;') #{city.properties.COUNTY}
+                td(style='text-align: center;') #{city.properties.LSAD}
+                td(style='text-align: center;') #{city.properties.CENSUSAREA}
+                td(style='text-align: center;') #{city.geometry.type}
+                
