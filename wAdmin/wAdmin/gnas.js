@@ -43,7 +43,7 @@ var smtpConfig = {
     }
 };
 
-var transporter = nodemailer.createTransport(smtpConfig);
+var   transporter = nodemailer.createTransport(smtpConfig);
 // verify connection configuration
 transporter.verify(function(error, success) {
    if (error) {
@@ -129,7 +129,7 @@ feedparser.on('end', function() {
 
   console.log("entering mail");
   var mailOptions = {
-    from: '"GNAS Alert" gnas@alvinbaker.com>', // sender address
+    from: '"GNAS Alert" <gnas@alvinbaker.com>', // sender address
     to: 'gnas@alvinbaker.com, lyonsden@lyons-family.net', // list of receivers
     subject: '', // Subject line
     text: alertString, // plaintext body

@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a8c74a9-b674-4b04-9d6e-ab70c4b47b68" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/wAdmin/wAdmin/us_postal_codes.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/gnas.js" afterPath="$PROJECT_DIR$/wAdmin/wAdmin/gnas.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wAdmin/wAdmin/FIPSdata.js" afterPath="$PROJECT_DIR$/wAdmin/wAdmin/FIPSdata.js" />
     </list>
     <ignored path="GNAS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,16 +24,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="geonames.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wAdmin/wAdmin/routes/geonames.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="alertinfo.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wAdmin/wAdmin/routes/alertinfo.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -95,11 +84,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Zipdata.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Zipdata.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wAdmin/wAdmin/Zipdata.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="493">
+              <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gnas.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wAdmin/wAdmin/gnas.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="123" column="9" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -128,6 +127,7 @@
         <option value="$PROJECT_DIR$/data/national_county.txt" />
         <option value="$PROJECT_DIR$/wAdmin/wAdmin/customerdata.js" />
         <option value="$PROJECT_DIR$/wAdmin/wAdmin/FIPSdata.js" />
+        <option value="$PROJECT_DIR$/wAdmin/wAdmin/gnas.js" />
       </list>
     </option>
   </component>
@@ -250,6 +250,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\hacker\Documents\GNAS\GNAS\wAdmin\wAdmin" />
+      <recent name="C:\Users\hacker\Documents\GNAS\GNAS\wAdmin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hacker\Documents\GNAS\GNAS\wAdmin" />
@@ -257,11 +258,14 @@
       <recent name="C:\Users\hacker\Documents\GNAS\GNAS\wAdmin\wAdmin\routes" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.FIPSdata.js">
+  <component name="RunManager" selected="Node.js.gnas.js">
     <configuration default="false" name="customerdata.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="$PROJECT_DIR$/wAdmin/wAdmin/customerdata.js" working-dir="$PROJECT_DIR$/wAdmin/wAdmin/routes">
       <method />
     </configuration>
     <configuration default="false" name="FIPSdata.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="FIPSdata.js" working-dir="$PROJECT_DIR$/wAdmin/wAdmin">
+      <method />
+    </configuration>
+    <configuration default="false" name="gnas.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="$PROJECT_DIR$/wAdmin/wAdmin/gnas.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -279,7 +283,7 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="C:/Program Files/nodejs/node" working-dir="">
       <method />
     </configuration>
     <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
@@ -311,14 +315,16 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Node.js.customerdata.js" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.FIPSdata.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.gnas.js" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.FIPSdata.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.customerdata.js" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.gnas.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.FIPSdata.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.customerdata.js" />
       </list>
     </recent_temporary>
   </component>
@@ -332,7 +338,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1466012246854</updated>
-      <workItem from="1466012248082" duration="8784000" />
+      <workItem from="1466012248082" duration="9592000" />
     </task>
     <task id="LOCAL-00001" summary="adding customer.json and dependencies">
       <created>1466016161550</created>
@@ -369,11 +375,18 @@
       <option name="project" value="LOCAL" />
       <updated>1466022185258</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="FIPS works now - with 100% less County in the county names">
+      <created>1466022883495</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1466022883495</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8784000" />
+    <option name="totallyTimeSpent" value="9592000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -393,8 +406,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46936116" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -416,7 +429,8 @@
     <MESSAGE value="adding customer.json and dependencies" />
     <MESSAGE value="customer data generation works" />
     <MESSAGE value="FIPS works now" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIPS works now" />
+    <MESSAGE value="FIPS works now - with 100% less County in the county names" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIPS works now - with 100% less County in the county names" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -517,14 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wAdmin/wAdmin/FIPSdata.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wAdmin/wAdmin/us_postal_codes.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -533,10 +539,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wAdmin/wAdmin/FIPSdata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wAdmin/wAdmin/node_modules/smtp-connection/lib/smtp-connection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="483" column="14" selection-start-line="483" selection-start-column="14" selection-end-line="483" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wAdmin/wAdmin/node_modules/nodemailer-smtp-transport/lib/smtp-transport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="161" column="20" selection-start-line="161" selection-start-column="20" selection-end-line="161" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wAdmin/wAdmin/Zipdata.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="493">
+          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wAdmin/wAdmin/gnas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="123" column="9" selection-start-line="123" selection-start-column="9" selection-end-line="123" selection-end-column="9" />
           <folding />
         </state>
       </provider>
