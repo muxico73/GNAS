@@ -1,14 +1,14 @@
 function gnasEvent(eventType) {
   this.eventType = eventType;
   this.unique = '';
-  this.severity = ''
-  this.urgency = ''
-  this.certainty = ''
+  this.severity = '';
+  this.urgency = '';
+  this.certainty = '';
   this.fips = "FIPS6";
   this.fipsArray = [];
   this.ugc = "UGC";
   this.ugcArray = [];
-};
+}
 gnasEvent.prototype.setUnique = function(uri) {
   var pieces = uri.split(".");
   var index = pieces.length;
@@ -59,7 +59,6 @@ var req = request(feed),
   weatherEvents = new HashMap();
 
 setInterval(function() {
-  req = "";
   req = request(feed);
   console.log("Interval expired");
 }, 2 * 60 * 1000);
@@ -191,22 +190,36 @@ feedparser.on('end', function() {
   });
 
   customerPhones = '2176491422@txt.att.net, 3097509512@txt.att.net, 2172026548@txt.att.net';
-  console.log("entering mail");
+  var message1 = 'State Farm has been notified of a severe weather event in your area.  Take shelter immediately'
+    var message2 = 'If it is safe to do so, move vehicles and pets indoors and secure personal property. Call 1-800-SF-CLAIM to report any damages.'
   var mailOptions = {
     from: '"State Farm" <gnas@alvinbaker.com>', // sender address
     to: customerPhones, // list of receivers
     subject: '', // Subject line
-    text: "Severe weather alert - take cover now!!!!", // plaintext body
+    text: message1 // plaintext body
     // html: '<b>Hello world 🐴</b>' // html body
   };
 
   // send mail with defined transport object
-  console.log("sending mail");
   transporter.sendMail(mailOptions, function(error, info) {
     if (error) {
       return console.log(error);
     }
     console.log('Message sent: ' + info.response);
   });
-  console.log("sent mail");
+    mailOptions = {
+        from: '"State Farm" <gnas@alvinbaker.com>', // sender address
+        to: customerPhones, // list of receivers
+        subject: '', // Subject line
+        text: message2 // plaintext body
+        // html: '<b>Hello world 🐴</b>' // html body
+    };
+
+    // send mail with defined transport object
+    transporter.sendMail(mailOptions, function(error, info) {
+        if (error) {
+            return console.log(error);
+        }
+        console.log('Message sent: ' + info.response);
+    });
 });
