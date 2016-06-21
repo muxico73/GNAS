@@ -124,30 +124,65 @@ var dbZip = monk('localhost:27017/zip');
 // I have to leave for today. we can catch up tomorrow
 // the queries below should all work, but they're breaking because they run async
 
-function countycallback (e,counties){
-  var zipcollection = dbZip.get('zipcollection');
-  zipcollection.find({county: counties[0].county, state: counties[0].state}, zipcb);
+var syncQuery = function (db, collection, input, queryJSON, cb) {
+  var collect = db.get(collection);
+  var pending = input.length;
+  if (pending == 0) return [];
+  var results = [];
+  for (var i in input) {
+    collect.find(JSON.parse(queryJSON), function (err, result) {
+      if (err) {
+          // If it failed, return error
+          console.log("There was a problem for " + input[i] + ". Error: " + err.message);
+      } else {
+        results.push(result);
+      }
+      if( 0 === --pending ) {
+                cb(results); //callback if all queries are processed
+      }
+    });
+  }
 }
 
-function zipcb(e,zips){
-  var custcollection = dbCust.get('customercollection');
-  custcollection.find({zipcode: zips[0].zipcode},custcb);
+var getCounties = function (input, cb) {
+    syncQuery(dbFIPS, 'countycollection', input, "{FIPS: input[i]}", cb);
 }
 
-function custcb(e,cust){
-  custList.push(cust);
+var getZips =  function (input, cb) {
+  syncQuery(dbZip, 'zipcollection', input, "{county: input[0].county, state: input[0].state}", cb);
+}
+var getCustomers =  function (input, cb) {
+  syncQuery(dbCust, 'custcollection', input, "{zipcode: input[0].zipcode}", cb);
 }
 
-var discoverPhones = function (inputArray) {
+var discoverPhones = function (inputArray, cb) {
   var countyList = [];
   var zipList = [];
   var custList = [];
   //from FIPS, get County
-  var collection = dbFIPS.get('countycollection');
   if (inputArray.length < 0) return "";
-
-  for (i = 0; i < inputArray.length; i++) {
-    collection.find({FIPS: inputArray[i]}, countycallback);
+    
+  //when this is zero, we processed all the queries
+  var processedAllThree = 3;
+  
+  while (processedAllThree > 2) {
+    getCounties (inputArray, function (counties) {
+      countyList = counties;
+      --processedAllThree; 
+    });
+  }
+  
+  while (processedAllThree > 1) {
+    getZips(countyList, function (zips) {
+      zipList = zips;
+      --processedAllThree;
+    })
+  }
+  
+  while (processedAllThree > 0) {
+    getCustomers(zipList, function (custs) {
+      custList = custs;
+    })
   }
 
   // at this point, custList has everything
@@ -158,7 +193,7 @@ var discoverPhones = function (inputArray) {
 function formatEmails(custList) {
   if (custList.length < 0) return "";
   var emails = "";
-  for (i = 0; i < custList.length; i++) {
+  for (var i = 0; i < custList.length; i++) {
     emails = emails + custList[i].telephonenumber.replace(/-/g, '') + "@txt.att.net, ";
   }
   //need to trim the last ', '
@@ -173,14 +208,18 @@ feedparser.on('end', function() {
     switch (value.severity) {
       case "Extreme":
         if ((value.certainty == "Observed" || value.certainty == "Likely")) {
-          customerPhones = discoverPhones(value.fipsArray);
+          discoverPhones(value.fipsArray, function (phones) {
+             customerPhones = phones;
+          });
           alertString += "Extreme weather event " + value.certainty + " - " + value.eventType + " - need to notify customers\r\n";
           alertString += value.fips + ": " + value.fipsArray + "\r\n";
         }
         break;
       case "Severe":
         if ((value.certainty == "Observed" || value.certainty == "Likely")) {
-          customerPhones = discoverPhones(value.fipsArray);
+          discoverPhones(value.fipsArray, function (phones) {
+               customerPhones = phones;
+            });
           alertString += "Severe weather event " + value.certainty + " - " + value.eventType + " - need to notify customers\r\n";
           alertString += value.fips + ": " + value.fipsArray + "\r\n";
         }
